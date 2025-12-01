@@ -563,282 +563,293 @@
 
 
  /* Tablet - 1024px */
-        @media (max-width: 1024px) {
-            .hamburger {
-                display: flex;
-            }
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
+    }
 
-            .nav-menu {
-                display: none;
-            }
+    .nav-menu {
+        display: none;
+    }
 
-            .mobile-menu {
-                display: block;
-            }
+    .mobile-menu {
+        display: block;
+    }
 
-            .creative {
-                width: 200px;
-                left: 3%;
-                top: 40%;
-            }
+    .creative {
+        width: 200px;
+        left: 3%;
+        top: 40%;
+    }
 
-            .big-title {
-                width: 85vw;
-                bottom: 25%;
-                left: 48px;
-            }
+    .big-title {
+        width: 85vw;
+        bottom: 25%;
+        left: 48px;
+    }
 
-            .hero-img {
-                height: 65vh;
-            }
+    .hero-img {
+        height: 65vh;
+    }
 
-            .barcode {
-                width: 130px;
-                right: 5%;
-                top: 57%;
-            }
+    .barcode {
+        width: 130px;
+        right: 5%;
+        top: 57%;
+    }
 
-            .username {
-                font-size: 2.5vw;
-                right: 2%;
-                top: 47%;
-            }
+    .username {
+        font-size: 2.5vw;
+        right: 2%;
+        top: 47%;
+    }
 
-            .patung-img {
-                width: 140px;
-                top: 860px;
-                right: 89%;
-            }
+    .patung-img {
+        width: 140px;
+        top: 860px;
+        right: 89%;
+    }
 
-            .bio-left,
-            .bio-right {
-                width: 35%;
-                font-size: 2.2vw;
-            }
+    .bio-left,
+    .bio-right {
+        width: 35%;
+        font-size: 2.2vw;
+    }
 
-            .bio-left {
-                left: 3%;
-            }
+    .bio-left {
+        left: 3%;
+    }
 
-            .bio-right {
-                right: 3%;
-                bottom: 3.5%;
-            }
-        }
+    .bio-right {
+        right: 3%;
+        bottom: 3.5%;
+    }
+}
 
-        /* Mobile Large - 700px */
-        @media (max-width: 700px) {
-            .creative {
-                width: 150px;
-                left: 6%;
-                top: 47.5%;
-            }
+/* Mobile Large - 700px */
+@media (max-width: 700px) {
+    .creative {
+        width: 150px;
+        left: 6%;
+        top: 47.5%;
+    }
 
-            .big-title {
-                width: 85vw;
-                bottom: 25%;
-                left: 40px;
-            }
+    .big-title {
+        width: 85vw;
+        bottom: 25%;
+        left: 40px;
+    }
 
-            .hero-img {
-                height: 50vh;
-            }
+    .hero-img {
+        height: 50vh;
+    }
 
-            .barcode {
-                width: 90px;
-                right: 8%;
-                top: 56%;
-            }
+    .barcode {
+        width: 90px;
+        right: 8%;
+        top: 56%;
+    }
 
-            .username {
-                font-size: 3vw;
-                right: 2%;
-                top: 52%;
-            }
+    .username {
+        font-size: 3vw;
+        right: 2%;
+        top: 52%;
+    }
 
-            .patung-img {
-                width: 70px;
-                right: 99%;
-                top: 67%;
-            }
+    .patung-img {
+        width: 70px;
+        right: 99%;
+        top: 67%;
+    }
 
-            .bio-left,
-            .bio-right {
-                width: 45%;
-                font-size: 2.2vw;
-                line-height: 1.5;
-            }
+    .bio-left,
+    .bio-right {
+        width: 45%;
+        font-size: 2.2vw;
+        line-height: 1.5;
+    }
 
-            .bio-left {
-                left: 2%;
-                bottom: 4%;
-            }
+    .bio-left {
+        left: 2%;
+        bottom: 4%;
+    }
 
-            .bio-right {
-                right: 2%;
-                bottom: 5.5%;
-            }
-        }
+    .bio-right {
+        right: 2%;
+        bottom: 5.5%;
+    }
+}
 
-        /* Mobile Medium - 550px */
-        @media (max-width: 550px) {
-            .creative {
-                width: 150px;
-                left: 5%;
-                top: 52%;
-            }
+/* Mobile Medium - 550px */
+@media (max-width: 550px) {
+    .creative {
+        width: 120px;
+        left: 5%;
+        top: 50%;
+    }
 
-            .big-title {
-                width: 120vw;
-                bottom: 25%;
-            }
+    .big-title {
+        width: 90vw;
+        bottom: 22%;
+        left: 5%;
+        font-size: 18vw;
+    }
 
-            .hero-img {
-                height: 50vh;
-            }
+    .hero-img {
+        height: 55vh;
+    }
 
-            .barcode {
-                width: 80px;
-                right: 8%;
-                top: 61%;
-            }
+    .barcode {
+        width: 70px;
+        right: 6%;
+        top: 60%;
+    }
 
-            .username {
-                font-size: 3vw;
-                right: 2%;
-                top: 55%;
-            }
+    .username {
+        font-size: 3.5vw;
+        right: 3%;
+        top: 54%;
+    }
 
-            .patung-img {
-                width: 70px;
-                right: 89%;
-                top: 66%;
-            }
+    .patung-img {
+        width: 60px;
+        right: 90%;
+        top: 69%;
+    }
 
-            .bio-left,
-            .bio-right {
-                width: 45%;
-                font-size: 2.2vw;
-                line-height: 1.5;
-            }
+    .bio-left,
+    .bio-right {
+        width: 47%;
+        font-size: 2.5vw;
+        line-height: 1.6;
+    }
 
-            .bio-left {
-                left: 2%;
-                bottom: 4%;
-            }
+    .bio-left {
+        left: 2%;
+        bottom: 3%;
+    }
 
-            .bio-right {
-                right: 2%;
-                bottom: 5.5%;
-            }
-        }
+    .bio-right {
+        right: 2%;
+        bottom: 4.5%;
+    }
+}
 
-        /* Mobile Normal - 450px */
-        @media (max-width: 450px) {
-            .creative {
-                width: 100px;
-                left: 3%;
-                top: 47%;
-            }
+/* Mobile Small - 430px (Realme C33 & similar) */
+@media (max-width: 430px) {
+    .creative {
+        width: 90px;
+        left: 4%;
+        top: 48%;
+    }
 
-            .big-title {
-                width: 100vh;
-                bottom: 23%;
-            }
+    .big-title {
+        width: 92vw;
+        bottom: 20%;
+        left: 4%;
+        font-size: 16vw;
+    }
 
-            .hero-img {
-                height: 60vh;
-            }
+    .hero-img {
+        height: 58vh;
+        object-fit: cover;
+    }
 
-            .barcode {
-                width: 60px;
-                right: 9%;
-                top: 58%;
-            }
+    .barcode {
+        width: 55px;
+        right: 5%;
+        top: 59%;
+    }
 
-            .username {
-                font-size: 3vw;
-                right: 5%;
-                top: 51%;
-            }
+    .username {
+        font-size: 4vw;
+        right: 3%;
+        top: 52.5%;
+    }
 
-            .patung-img {
-                width: 70px;
-                right: 83%;
-                top: 68%;
-            }
+    .patung-img {
+        width: 50px;
+        right: 88%;
+        top: 70%;
+    }
 
-            .bio-left,
-            .bio-right {
-                width: 45%;
-                font-size: 2.2vw;
-                line-height: 1.5;
-            }
+    .bio-left,
+    .bio-right {
+        width: 48%;
+        font-size: 3vw;
+        line-height: 1.7;
+    }
 
-            .bio-left {
-                left: 2%;
-                bottom: 4%;
-            }
+    .bio-left {
+        left: 2%;
+        bottom: 2.5%;
+    }
 
-            .bio-right {
-                right: 2%;
-                bottom: 5.5%;
-            }
-        }
+    .bio-right {
+        right: 2%;
+        bottom: 4%;
+    }
 
-        /* Mobile Small - 360px */
-        @media (max-width: 360px) {
-            .creative {
-                width: 100px;
-                left: 3%;
-                top: 50%;
-            }
+    .scroll-indicator {
+        display: none;
+    }
+}
 
-            .big-title {
-                width: 120vw;
-                bottom: 23%;
-            }
+/* Mobile Extra Small - 375px */
+@media (max-width: 375px) {
+    .creative {
+        width: 80px;
+        left: 3%;
+        top: 47%;
+    }
 
-            .hero-img {
-                height: 52vh;
-            }
+    .big-title {
+        width: 94vw;
+        bottom: 18%;
+        left: 3%;
+        font-size: 15vw;
+    }
 
-            .barcode {
-                width: 80px;
-                right: 2%;
-                top: 58%;
-            }
+    .hero-img {
+        height: 60vh;
+    }
 
-            .username {
-                font-size: 3vw;
-                right: 5%;
-                top: 54%;
-            }
+    .barcode {
+        width: 50px;
+        right: 4%;
+        top: 58%;
+    }
 
-            .patung-img {
-                width: 70px;
-                right: 83%;
-                top: 68%;
-            }
+    .username {
+        font-size: 4.5vw;
+        right: 2%;
+        top: 51%;
+    }
 
-            .bio-left,
-            .bio-right {
-                width: 45%;
-                font-size: 2.2vw;
-                line-height: 1.5;
-            }
+    .patung-img {
+        width: 45px;
+        right: 87%;
+        top: 71%;
+    }
 
-            .bio-left {
-                left: 2%;
-                bottom: 4%;
-            }
+    .bio-left,
+    .bio-right {
+        width: 48%;
+        font-size: 3.2vw;
+        line-height: 1.8;
+    }
 
-            .bio-right {
-                right: 2%;
-                bottom: 5.5%;
-            }
+    .bio-left {
+        left: 2%;
+        bottom: 2%;
+    }
 
-            .scroll-indicator {
-                display: none;
-            }
-        }
+    .bio-right {
+        right: 2%;
+        bottom: 3.5%;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
