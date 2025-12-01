@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rico Shandy Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Pacifico&family=Anton&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR DESKTOP ===== -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HAMBURGER BUTTON ===== -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#skill" onclick="toggleMenu()">Skill</a></li>
+            <li><a href="#certificate" onclick="toggleMenu()">Certificate</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- =============== HERO SECTION =============== -->
+    <section class="hero">
+        <!-- Creative Text Image -->
+        <img src="Creative.png" class="creative" alt="Creative">
+
+        <!-- Patung Decoration -->
+        <img src="Patung.png" alt="Patung" class="patung-img">
+
+        <!-- Big Portfolio Title -->
+        <div class="big-title">
+            <img src="PORTFOLIO.png" alt="Portfolio Title">
+        </div>
+
+        <!-- Your Main Photo -->
+        <img src="Halaman 1.png" class="hero-img" alt="Rico Shandy">
+
+        <!-- Barcode -->
+        <img src="barcode.png" class="barcode" alt="Barcode">
+
+        <!-- Username -->
+        <div class="username">@Rishnzty</div>
+
+        <!-- Bio Text Left -->
+        <div class="bio-left">
+            hii my name is Rico Shandy Mahendra.<br>
+            I am a Full-Stack Web developer with expertise in PHP. I have experience in building scalable, secure, and reliable web applications using various frameworks and technologies. I enjoy tackling complex problems and continuously seek opportunities to learn new skills.
+        </div>
+
+        <!-- Bio Text Right -->
+        <div class="bio-right">
+            I am a Full-Stack Web developer with expertise in PHP. I have experience in building scalable, secure, and reliable web applications using various frameworks and technologies. I enjoy tackling complex problems and continuously seek opportunities to learn new skills.
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ===== JAVASCRIPT FOR TOGGLE MENU ===== -->
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>

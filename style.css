@@ -1,0 +1,844 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background-color: #776130;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+
+/* ===== NAVBAR CLEAN TOP RIGHT ===== */
+
+        /* ===== NAVBAR CLEAN TOP RIGHT ===== */
+.nav-menu {
+    position: fixed;
+    top: 40px;
+    right: 140px;
+    z-index: 100;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.3s;
+    transition: 0.3s ease;
+    padding: 5px 8px;
+}
+
+/* HOVER → putih */
+.nav-menu a:hover {
+    color: #ffffff;
+}
+
+/* CLICK / ACTIVE → underline + white */
+.nav-menu a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 3px;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+    position: fixed;
+    top: 40px;
+    right: 30px;
+    z-index: 101;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #1a1a1a;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+    background-color: #ffffff;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+    background-color: #ffffff;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(58, 48, 32, 0);
+    
+    z-index: 100;
+    transition: 0.4s ease;
+    display: none;
+    padding-top: 100px;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0 30px;
+}
+
+.mobile-menu li {
+    margin-bottom: 30px;
+}
+
+.mobile-menu a {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: block;
+    padding: 10px 0;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+    color: #f0d98d;
+    padding-left: 10px;
+}
+
+/* ===== RESPONSIVE NAVBAR ===== */
+
+/* Tablet - 1024px */
+@media (max-width: 1024px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+/* Mobile Large - 700px */
+@media (max-width: 700px) {
+    .hamburger {
+        top: 30px;
+        right: 20px;
+    }
+
+    .mobile-menu {
+        width: 80%;
+    }
+
+    .mobile-menu a {
+        font-size: 20px;
+    }
+}
+
+/* Mobile Medium - 450px */
+@media (max-width: 450px) {
+    .hamburger {
+        top: 25px;
+        right: 15px;
+    }
+
+    .hamburger span {
+        width: 25px;
+        height: 2.5px;
+    }
+
+    .mobile-menu {
+        width: 85%;
+        padding-top: 80px;
+    }
+
+    .mobile-menu li {
+        margin-bottom: 25px;
+    }
+
+    .mobile-menu a {
+        font-size: 18px;
+    }
+}
+
+
+        /* ===== SECTION 1 - HERO ===== */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background-color: #776130;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* CREATIVE TEXT - dengan floating animation */
+        .creative {
+            position: absolute;
+            top: -3%;
+            left: 4.5%;
+            width: 350px;
+            z-index: 5;
+            opacity: 0;
+            animation: fadeInDown 1s ease forwards, floatSlow 4s ease-in-out infinite;
+            animation-delay: 0.3s, 1.3s;
+            transition: transform 0.3s ease;
+        }
+
+        /* BIG TITLE PORTFOLIO - dengan floating animation */
+        .big-title {
+            position: absolute;
+            bottom: -2%;
+            z-index: 1;
+            opacity: 0;
+            animation: fadeInUp 1.2s ease forwards, floatMedium 5s ease-in-out infinite;
+            animation-delay: 0.5s, 1.7s;
+            transform: scaleY(1.3);
+            transition: transform 0.3s ease;
+        }
+
+        .big-title img {
+            width: 90vw;
+            max-width: 1500px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0px 5px 3px rgba(0,0,0,0.25));
+        }
+
+        /* HERO IMAGE - dengan floating animation */
+        .hero-img {
+            position: absolute;
+            height: 94vh;
+            z-index: 3;
+            bottom: 0;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: zoomIn 1.5s ease forwards, floatHero 6s ease-in-out infinite;
+            animation-delay: 0.8s, 2.3s;
+            transition: transform 0.3s ease;
+        }
+
+        /* BARCODE - dengan floating animation */
+        .barcode {
+            position: absolute;
+            top: 32%;
+            right: 9%;
+            width: 210px;
+            transform: rotate(-1deg);
+            opacity: 0;
+            z-index: 5;
+            animation: fadeInRotate 1s ease forwards, floatBarcode 4.5s ease-in-out infinite;
+            animation-delay: 1.2s, 2.2s;
+            transition: transform 0.3s ease;
+        }
+
+        /* USERNAME - dengan floating animation */
+        .username {
+            position: absolute;
+            top: 17.1%;
+            right: 5%;
+            font-size: 1.2vw;
+            opacity: 0;
+            transform: rotate(25deg);
+            z-index: 5;
+            animation: fadeIn 1s ease forwards, floatUsername 5s ease-in-out infinite;
+            animation-delay: 1.4s, 2.4s;
+            transition: transform 0.3s ease;
+        }
+
+        /* PATUNG - dengan floating animation */
+        .patung-img {
+            position: absolute;
+            right: 89.5%;
+            top: 68.9%;
+            transform: translateY(-50%);
+            width: 180px;
+            opacity: 0;
+            z-index: 2;
+            animation: fadeInUp 1s ease forwards, floatPatung 5.5s ease-in-out infinite;
+            animation-delay: 1s, 2s;
+            transition: transform 0.3s ease;
+        }
+
+        /* BIO TEXT - TETAP FIX, tidak bergerak */
+        .bio-left,
+        .bio-right {
+            width: 30%;
+            font-size: 1vw;
+            position: absolute;
+            bottom: 1.5%;
+            line-height: 1.3;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .bio-left {
+            left: 5%;
+            text-align: left;
+            animation-delay: 1.6s;
+        }
+
+        .bio-right {
+            bottom: 4%;
+            right: 5%;
+            text-align: right;
+            animation-delay: 1.8s;
+        }
+
+        /* SCROLL INDICATOR */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator span {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border-bottom: 2px solid white;
+            border-right: 2px solid white;
+            transform: rotate(45deg);
+            margin: -10px;
+            opacity: 0.6;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        
+        /* Initial Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeInRotate {
+            to {
+                opacity: 0.9;
+            }
+        }
+
+        /* Floating Animations - SUBTLE & PROFESSIONAL */
+        
+        /* Creative - slow gentle movement */
+        @keyframes floatSlow {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        /* Portfolio - medium gentle movement */
+        @keyframes floatMedium {
+            0%, 100% {
+                transform: scaleY(1.3) translateY(0px);
+            }
+            50% {
+                transform: scaleY(1.3) translateY(-15px);
+            }
+        }
+
+
+        
+
+        /* Barcode - gentle rotation + float */
+        @keyframes floatBarcode {
+            0%, 100% {
+                transform: rotate(-1deg) translateY(0px);
+            }
+            50% {
+                transform: rotate(-1deg) translateY(-10px);
+            }
+        }
+
+        /* Username - subtle float with rotation */
+        @keyframes floatUsername {
+            0%, 100% {
+                transform: rotate(25deg) translateY(0px);
+            }
+            50% {
+                transform: rotate(25deg) translateY(-8px);
+            }
+        }
+
+        /* Patung - gentle sway */
+        @keyframes floatPatung {
+            0%, 100% {
+                transform: translateY(-50%) translateX(0px);
+            }
+            50% {
+                transform: translateY(-50%) translateX(-8px);
+            }
+        }
+
+        /* Scroll Indicator Bounce */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+       
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #6b5d3f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4a4030;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3a3020;
+        }
+
+        /* Smooth transitions untuk semua interactive elements */
+        .creative:hover,
+        .hero-img:hover,
+        .barcode:hover,
+        .patung-img:hover {
+            transform: scale(1.05);
+        }
+
+ /* ===== RESPONSIVE DESIGN ===== */
+
+
+
+
+/* Tablet - 1379px */
+        @media (max-width: 1379px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .creative {
+                width: 200px;
+                left: 3%;
+                top: 40%;
+            }
+
+            .big-title {
+                width: 85vw;
+                bottom: 25%;
+                left: 48px;
+            }
+
+            .hero-img {
+                height: 65vh;
+            }
+
+            .barcode {
+                width: 130px;
+                right: 5%;
+                top: 57%;
+            }
+
+            .username {
+                font-size: 2.5vw;
+                right: 2%;
+                top: 47%;
+            }
+
+            .patung-img {
+                width: 140px;
+                top: 860px;
+                right: 89%;
+            }
+
+            .bio-left,
+            .bio-right {
+                width: 35%;
+                font-size: 2.2vw;
+            }
+
+            .bio-left {
+                left: 3%;
+            }
+
+            .bio-right {
+                right: 3%;
+                bottom: 3.5%;
+            }
+        }
+
+
+
+
+
+ /* Tablet - 1024px */
+        @media (max-width: 1024px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .creative {
+                width: 200px;
+                left: 3%;
+                top: 40%;
+            }
+
+            .big-title {
+                width: 85vw;
+                bottom: 25%;
+                left: 48px;
+            }
+
+            .hero-img {
+                height: 65vh;
+            }
+
+            .barcode {
+                width: 130px;
+                right: 5%;
+                top: 57%;
+            }
+
+            .username {
+                font-size: 2.5vw;
+                right: 2%;
+                top: 47%;
+            }
+
+            .patung-img {
+                width: 140px;
+                top: 860px;
+                right: 89%;
+            }
+
+            .bio-left,
+            .bio-right {
+                width: 35%;
+                font-size: 2.2vw;
+            }
+
+            .bio-left {
+                left: 3%;
+            }
+
+            .bio-right {
+                right: 3%;
+                bottom: 3.5%;
+            }
+        }
+
+        /* Mobile Large - 700px */
+        @media (max-width: 700px) {
+            .creative {
+                width: 150px;
+                left: 6%;
+                top: 47.5%;
+            }
+
+            .big-title {
+                width: 85vw;
+                bottom: 25%;
+                left: 40px;
+            }
+
+            .hero-img {
+                height: 50vh;
+            }
+
+            .barcode {
+                width: 90px;
+                right: 8%;
+                top: 56%;
+            }
+
+            .username {
+                font-size: 3vw;
+                right: 2%;
+                top: 52%;
+            }
+
+            .patung-img {
+                width: 70px;
+                right: 99%;
+                top: 67%;
+            }
+
+            .bio-left,
+            .bio-right {
+                width: 45%;
+                font-size: 2.2vw;
+                line-height: 1.5;
+            }
+
+            .bio-left {
+                left: 2%;
+                bottom: 4%;
+            }
+
+            .bio-right {
+                right: 2%;
+                bottom: 5.5%;
+            }
+        }
+
+        /* Mobile Medium - 550px */
+        @media (max-width: 550px) {
+            .creative {
+                width: 150px;
+                left: 5%;
+                top: 52%;
+            }
+
+            .big-title {
+                width: 120vw;
+                bottom: 25%;
+            }
+
+            .hero-img {
+                height: 50vh;
+            }
+
+            .barcode {
+                width: 80px;
+                right: 8%;
+                top: 61%;
+            }
+
+            .username {
+                font-size: 3vw;
+                right: 2%;
+                top: 55%;
+            }
+
+            .patung-img {
+                width: 70px;
+                right: 89%;
+                top: 66%;
+            }
+
+            .bio-left,
+            .bio-right {
+                width: 45%;
+                font-size: 2.2vw;
+                line-height: 1.5;
+            }
+
+            .bio-left {
+                left: 2%;
+                bottom: 4%;
+            }
+
+            .bio-right {
+                right: 2%;
+                bottom: 5.5%;
+            }
+        }
+
+        /* Mobile Normal - 450px */
+        @media (max-width: 450px) {
+            .creative {
+                width: 100px;
+                left: 3%;
+                top: 47%;
+            }
+
+            .big-title {
+                width: 100vh;
+                bottom: 23%;
+            }
+
+            .hero-img {
+                height: 60vh;
+            }
+
+            .barcode {
+                width: 60px;
+                right: 9%;
+                top: 58%;
+            }
+
+            .username {
+                font-size: 3vw;
+                right: 5%;
+                top: 51%;
+            }
+
+            .patung-img {
+                width: 70px;
+                right: 83%;
+                top: 68%;
+            }
+
+            .bio-left,
+            .bio-right {
+                width: 45%;
+                font-size: 2.2vw;
+                line-height: 1.5;
+            }
+
+            .bio-left {
+                left: 2%;
+                bottom: 4%;
+            }
+
+            .bio-right {
+                right: 2%;
+                bottom: 5.5%;
+            }
+        }
+
+        /* Mobile Small - 360px */
+        @media (max-width: 360px) {
+            .creative {
+                width: 100px;
+                left: 3%;
+                top: 50%;
+            }
+
+            .big-title {
+                width: 120vw;
+                bottom: 23%;
+            }
+
+            .hero-img {
+                height: 52vh;
+            }
+
+            .barcode {
+                width: 80px;
+                right: 2%;
+                top: 58%;
+            }
+
+            .username {
+                font-size: 3vw;
+                right: 5%;
+                top: 54%;
+            }
+
+            .patung-img {
+                width: 70px;
+                right: 83%;
+                top: 68%;
+            }
+
+            .bio-left,
+            .bio-right {
+                width: 45%;
+                font-size: 2.2vw;
+                line-height: 1.5;
+            }
+
+            .bio-left {
+                left: 2%;
+                bottom: 4%;
+            }
+
+            .bio-right {
+                right: 2%;
+                bottom: 5.5%;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+        }
