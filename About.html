@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Rico Shandy Mahendra</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 20px rgba(168, 190, 207, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 30px rgba(168, 190, 207, 0.8), 0 0 40px rgba(168, 190, 207, 0.6);
+            }
+        }
+
+
+
+
+        /* ===== NAVBAR ===== */
+        .nav-menu {
+            position: fixed;
+            top: 40px;
+            right: 140px;
+            z-index: 100;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .nav-menu ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #1a1a1a;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 5px 8px;
+            position: relative;
+        }
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+          color: #d4af37;
+        }
+
+        .nav-menu a:hover::before {
+            width: 100%;
+        }
+
+        .nav-menu a.active {
+             width: 100%;
+            background: #00000000;
+        }
+
+        .nav-menu a.active::before {
+            width: 100%;
+        }
+
+        /* ===== HAMBURGER MENU ===== */
+        .hamburger {
+            position: fixed;
+            top: 40px;
+            right: 30px;
+            z-index: 101;
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background-color: #1a1a1a;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:hover span {
+            background-color: #3a3020;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+            background-color: #ffffff;
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+            background-color: #ffffff;
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 70%;
+            height: 100vh;
+            background-color: transparent;
+            z-index: 100;
+            transition: 0.4s ease;
+            display: none;
+            padding-top: 100px;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            padding: 0 30px;
+        }
+
+        .mobile-menu li {
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active li {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-menu.active li:nth-child(1) { transition-delay: 0.1s; }
+        .mobile-menu.active li:nth-child(2) { transition-delay: 0.2s; }
+        .mobile-menu.active li:nth-child(3) { transition-delay: 0.3s; }
+        .mobile-menu.active li:nth-child(4) { transition-delay: 0.4s; }
+        .mobile-menu.active li:nth-child(5) { transition-delay: 0.5s; }
+
+        .mobile-menu a {
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: #f0d98d;
+            padding-left: 10px;
+            text-shadow: 0 0 20px rgba(240, 217, 141, 0.5), 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+        }
+
+        /* Left Side - Photo */
+        .about-left {
+            width: 40%;
+            height: 100vh;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.932), #776130);
+            position: relative;
+            overflow: hidden;
+            
+            animation: fadeInLeft 1s ease;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 110%;
+            padding-bottom: 6%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.6s ease;
+        }
+
+        .about-left:hover .about-photo {
+            filter: grayscale(100%);
+            transform: scale(1.05);
+        }
+
+        /* Right Side - Content */
+        .about-right {
+            width: 75%;
+            height: 100vh;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.932), #776130);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 80px 120px;
+            text-align: right;
+            animation: fadeInRight 1s ease;
+        }
+
+        .hello-title {
+            font-family: 'Georgia', serif;
+            font-size: 120px;
+            font-weight: 400;
+            color: #a8becf;
+            margin-bottom: 20px;
+            line-height: 1;
+            cursor: default;
+            transition: all 0.3s ease;
+            animation: fadeInRight 1.2s ease;
+        }
+
+        .hello-title:hover {
+            animation: glow 2s ease-in-out infinite;
+            transform: scale(1.05);
+        }
+
+        .underline {
+            width: 300px;
+            height: 3px;
+            background-color: #a8becf;
+            margin-bottom: 60px;
+            transition: all 0.4s ease;
+            animation: fadeInRight 1.4s ease;
+        }
+
+        .hello-title:hover ~ .underline {
+            width: 400px;
+            box-shadow: 0 0 20px rgba(168, 190, 207, 0.8);
+        }
+
+        .name-title {
+            font-size: 36px;
+            font-weight: 600;
+            color: #a8becf;
+            margin-bottom: 40px;
+            line-height: 1.3;
+            cursor: default;
+            transition: all 0.3s ease;
+            animation: fadeInRight 1.6s ease;
+        }
+
+        .name-title:hover {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(168, 190, 207, 0.6);
+            transform: translateX(-10px);
+        }
+
+        .bio-text {
+            font-size: 18px;
+            font-weight: 400;
+            color: #d4d4d4;
+            line-height: 1.8;
+            max-width: 700px;
+            cursor: default;
+            transition: all 0.3s ease;
+            animation: fadeInRight 1.8s ease;
+        }
+
+        .bio-text:hover {
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+            transform: translateX(-5px);
+        }
+
+
+
+
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+
+        /* Tablet - 1024px */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .about-right {
+                padding: 60px 80px;
+            }
+
+            .hello-title {
+                font-size: 90px;
+            }
+
+            .name-title {
+                font-size: 28px;
+            }
+
+            .bio-text {
+                font-size: 16px;
+            }
+
+            .underline {
+                width: 220px;
+                margin-bottom: 40px;
+            }
+
+            .hello-title:hover ~ .underline {
+                width: 280px;
+            }
+        }
+
+        /* Mobile Large - 768px */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .about-left {
+                width: 100%;
+                height: 50vh;
+            }
+
+            .about-right {
+                width: 100%;
+                height: auto;
+                min-height: 50vh;
+                padding: 60px 40px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .hello-title {
+                font-size: 70px;
+            }
+
+            .name-title {
+                font-size: 24px;
+            }
+
+            .bio-text {
+                font-size: 15px;
+            }
+
+            .underline {
+                width: 180px;
+                margin-bottom: 30px;
+            }
+
+            .hello-title:hover ~ .underline {
+                width: 220px;
+            }
+
+            .hamburger {
+                top: 30px;
+                right: 20px;
+            }
+
+            .mobile-menu {
+                width: 80%;
+            }
+
+            .mobile-menu a {
+                font-size: 20px;
+            }
+
+            .name-title:hover,
+            .bio-text:hover {
+                transform: translateX(0);
+                transform: scale(1.02);
+            }
+        }
+
+        /* Mobile Medium - 480px */
+        @media (max-width: 480px) {
+            .about-left {
+                height: 40vh;
+            }
+
+            .about-right {
+                padding: 40px 25px;
+            }
+
+            .hello-title {
+                font-size: 50px;
+            }
+
+            .name-title {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+
+            .bio-text {
+                font-size: 14px;
+                line-height: 1.7;
+            }
+
+            .underline {
+                width: 140px;
+                height: 2px;
+                margin-bottom: 25px;
+            }
+
+            .hello-title:hover ~ .underline {
+                width: 170px;
+            }
+
+            .hamburger {
+                top: 25px;
+                right: 15px;
+            }
+
+            .hamburger span {
+                width: 25px;
+                height: 2.5px;
+            }
+
+            .mobile-menu {
+                width: 85%;
+                padding-top: 80px;
+            }
+
+            .mobile-menu li {
+                margin-bottom: 25px;
+            }
+
+            .mobile-menu a {
+                font-size: 18px;
+            }
+        }
+
+        /* Mobile Small - 375px */
+        @media (max-width: 375px) {
+            .about-right {
+                padding: 30px 20px;
+            }
+
+            .hello-title {
+                font-size: 42px;
+            }
+
+            .name-title {
+                font-size: 18px;
+            }
+
+            .bio-text {
+                font-size: 13px;
+            }
+
+            .underline {
+                width: 120px;
+            }
+
+            .hello-title:hover ~ .underline {
+                width: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html" class="active">About</a></li>
+            <li><a href="Aboute 2.html">Skill</a></li>
+            <li><a href="Project.html">Project</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+        </ul>
+    </nav>
+
+    <!-- HAMBURGER MENU -->
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html" class="active">About</a></li>
+            <li><a href="Aboute 2.html">Skill</a></li>
+            <li><a href="Project.html">Project</a></li>
+            <li><a href="#certificate">Certificate</a></li>
+        </ul>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <!-- Left Side - Photo -->
+        <div class="about-left">
+            <img src="About.png" alt="Rico Shandy Mahendra" class="about-photo">
+        </div>
+
+        <!-- Right Side - Content -->
+        <div class="about-right">
+            <h1 class="hello-title">Hello!</h1>
+            <div class="underline"></div>
+            <h2 class="name-title">My Name is Rico Shandy Mahendra</h2>
+            <p class="bio-text">
+                I am a Frontend Web developer with expertise in PHP. I have experience in building scalable, secure, and reliable web applications using various frameworks and technologies. I enjoy tackling complex problems and continuously seek opportunities to learn new skills.
+            </p>
+        </div>
+    </section>
+
+
+    
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

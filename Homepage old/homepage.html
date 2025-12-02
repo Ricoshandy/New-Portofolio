@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio website template - Modern minimalist design">
+    <meta name="keywords" content="portfolio, professional, designer, developer, minimalist">
+    <meta name="author" content="Your Name">
+    <title>RicoShandy - Professional Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="icon" type="image/png" href="/image/wireshark.png" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ 
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">My Phortofolio</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#certivicate" class="nav-link">Certivicate</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-description">
+                       I am a Full-Stack Web developer with expertise in PHP. I have experience in building scalable, secure, and reliable web applications using various frameworks and technologies. I enjoy tackling complex problems and continuously seek opportunities to learn new skills. I am passionate about writing high-quality code that adheres to best practices and industry standards. I am always open to new challenges and opportunities to grow as a developer...
+                    </p>
+                    <p class="about-description">
+                        I believe in the power of simplicity and the importance of user-centered design. Every project is an 
+                        opportunity to solve problems and create something beautiful and functional.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">23+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in">
+                    <img src="Kelazz.jpg"  alt="Profile Picture" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">Design</h3>
+                    <p class="skill-description">UI/UX Design, Visual Identity, Brand Strategy</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">💻</div>
+                    <h3 class="skill-title">Development</h3>
+                    <p class="skill-description">Frontend Development, Responsive Design, Performance</p>
+                </div>
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">📱</div>
+                    <h3 class="skill-title">Mobile</h3>
+                    <p class="skill-description">Mobile-First Design, Progressive Web Apps</p>
+                </div>
+             
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="portfolio-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="bukti.png" alt="E-commerce Platform">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link" aria-label="View E-commerce Platform project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">E-commerce Platform</h3>
+                        <p class="portfolio-description">Modern e-commerce solution with seamless user experience and conversion optimization.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="bukti 3.jpg">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link" aria-label="View Fitness Mobile App project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Information system website</h3>
+                        <p class="portfolio-description"> information systems that use the World Wide Web to deliver information and services, enabling interaction and data sharing between users and businesses online. </p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Website</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySql</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in" data-category="branding">
+                    <div class="portfolio-image">
+                        <img src="bukti2.png">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link" aria-label="View Brand Identity Design project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Product Packaging</h3>
+                        <p class="portfolio-description">Eco-friendly packaging design that reflects brand values and attracts customers.</p>
+                        <div class="portfolio-tags">
+                             <span class="tag">Packaging</span>
+                            <span class="tag">Sustainability</span>
+                            <span class="tag">Print</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+              
+
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="certivicate" class="portfolio section">
+        <div class="container">
+            <h2 class="section-title fade-in">My Certivicate</h2>
+            
+            <!-- Filter Buttons -->
+           
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="Sertivicate Dicoding PNG/2.png" alt="E-commerce Platform">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link" aria-label="View E-commerce Platform project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Cloud and Gen AI in AWS</h3>
+                        <p class="portfolio-description">Optimize generative AI model performance through fine-tuning, evaluation jobs, and efficient deployment techniques like prompt caching and routing.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">AWS</span>
+                      
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item fade-in" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="/Sertivicate Dicoding PNG/3.png" alt="Fitness Mobile App">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link" aria-label="View Fitness Mobile App project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Javascript Programming</h3>
+                        <p class="portfolio-description">JavaScript (JS) is a programming language and core technology of the Web, alongside HTML and CSS. It was created by Brendan Eich in 1995.</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Responsive</span>
+                          
+                         
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="portfolio-item fade-in" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="/Sertivicate Dicoding PNG/5.png" alt="Corporate Website">
+                        <div class="portfolio-overlay">
+                            <a href="#" class="portfolio-link" aria-label="View Corporate Website project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-title">Frontend Dev</h3>
+                        <p class="portfolio-description">The front end of a website, often referred to as the "client-side," is the part that users directly see and interact with. </p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+             
+                    </div>
+                </div>
+
+             
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h2 class="section-title">Let's Work Together</h2>
+                    <p class="contact-description">
+                        Ready to bring your ideas to life? I'd love to hear about your project and discuss how we can create something amazing together.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:hello@yourname.com" class="contact-link">riko01667@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+1234567890" class="contact-link">+62 (895) 2533-7087</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Location</span>
+                            <span class="contact-text">Indonesia, Sumatra Selatan Palembang</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/rico-shandy-mahendra-662520314/" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="https://www.instagram.com/rishnzty/" class="social-link" aria-label="Twitter">Instagram</a>
+                        <a href="https://www.facebook.com/aakricosandy.mahendra/?locale=id_ID" class="social-link" aria-label="Dribbble">Facebook</a>
+                        <a href="https://github.com/Ricoshandy" class="social-link" aria-label="GitHub">GitHub</a>
+                    </div>
+                </div>
+                <form class="contact-form fade-in" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                    </div>
+                    <a href="https://www.instagram.com/rishnzty/" type="submit" class="submit-button">Send Message </a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p class="footer-text">&copy; 2025 Rico Shandy Mahendra. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <nav class="footer-nav">
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#about" class="footer-link">About</a>
+                        <a href="#portfolio" class="footer-link">Portfolio</a>
+                        <a href="#contact" class="footer-link">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
