@@ -795,12 +795,13 @@
     .big-title {
         width: 90vw;
         font-size: 24vw;
-        bottom: 22%;
+        bottom: 23%;
         left: 5%;
     }
 
     .hero-img {
         height: 50vh;
+        bottom: 8%;
     }
 
     .barcode {
@@ -812,13 +813,13 @@
     .username {
         font-size: 2.8vw;
         right: 3%;
-        top: 50%;
+        top: 53%;
     }
 
     .patung-img {
         width: 55px;
         bottom: 24%;
-        left: -4%;
+        left: -3.5%;
     }
 
     .bio-left,
@@ -832,12 +833,12 @@
 
     .bio-left {
         left: 2%;
-        bottom: 3%;
+        bottom: 9%;
     }
 
     .bio-right {
         right: 3%;
-        bottom: 3%;
+        bottom: 9%;
     }
 
     .scroll-indicator {
@@ -901,3 +902,12 @@
         bottom: 5%;
     }
 }
+
+
+
+
+
+
+
+
+
