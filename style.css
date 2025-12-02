@@ -676,18 +676,18 @@
     .creative {
         width: 80px;
         left: 3%;
-        top: 44%;
+        top: 49%;
     }
 
     .big-title {
         width: 90vw;
         font-size: 24vw;
-        bottom: 22%;
+        bottom: 30%;
         left: 5%;
     }
 
     .hero-img {
-        height: 50vh;
+        height: 55vh;
     }
 
     .barcode {
@@ -699,17 +699,17 @@
     .username {
         font-size: 1.8vw;
         right: 3%;
-        top: 48%;
+        top: 50%;
     }
 
     .patung-img {
         width: 55px;
-        bottom: 25%;
+        bottom: 32%;
         left: -2%;
     }
     .bio-left,
     .bio-right {
-        width: 55%;
+        width: 23%;
         font-size: 2vw;
         line-height: 1.5;
         word-wrap: break-word;
